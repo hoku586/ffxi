@@ -16,17 +16,17 @@
 require("scripts/globals/common");
 
 -- Enable Expansion (1= yes 0= no)
-ENABLE_COP     = 0;
-ENABLE_TOAU    = 0;
-ENABLE_WOTG    = 0;
+ENABLE_COP     = 1;
+ENABLE_TOAU    = 1;
+ENABLE_WOTG    = 1;
 ENABLE_ACP     = 0;
 ENABLE_AMK     = 0;
 ENABLE_ASA     = 0;
-ENABLE_ABYSSEA = 0;
+ENABLE_ABYSSEA = 1;
 ENABLE_SOA     = 0;
 ENABLE_ROV     = 0;
 
-ENABLE_VOIDWATCH = 0; -- Not an expansion, but has its own storyline.
+ENABLE_VOIDWATCH = 1; -- Not an expansion, but has its own storyline.
 
 -- FIELDS OF VALOR/Grounds of Valor settings
 ENABLE_FIELD_MANUALS  = 1; -- Enables Fields of Valor
@@ -45,18 +45,18 @@ INITIAL_LEVEL_CAP = 50; -- The initial level cap for new players.  There seems t
 MAX_LEVEL = 75; -- Level max of the server, lowers the attainable cap by disabling Limit Break quests.
 NORMAL_MOB_MAX_LEVEL_RANGE_MIN = 81; -- Lower Bound of Max Level Range for Normal Mobs (0 = Uncapped)
 NORMAL_MOB_MAX_LEVEL_RANGE_MAX = 84; -- Upper Bound of Max Level Range for Normal Mobs (0 = Uncapped)
-START_GIL = 10; -- Amount of gil given to newly created characters.
-START_INVENTORY = 30; -- Starting inventory and satchel size.  Ignores values < 30.  Do not set above 80!
+START_GIL = 10000; -- Amount of gil given to newly created characters.
+START_INVENTORY = 80; -- Starting inventory and satchel size.  Ignores values < 30.  Do not set above 80!
 OPENING_CUTSCENE_ENABLE = 0; -- Set to 1 to enable opening cutscenes, 0 to disable.
 SUBJOB_QUEST_LEVEL = 18; -- Minimum level to accept either subjob quest.  Set to 0 to start the game with subjobs unlocked.
 ADVANCED_JOB_LEVEL = 30; -- Minimum level to accept advanced job quests.  Set to 0 to start the game with advanced jobs.
-ALL_MAPS = 0; -- Set to 1 to give starting characters all the maps.
-UNLOCK_OUTPOST_WARPS = 0; -- Set to 1 to give starting characters all outpost warps.  2 to add Tu'Lia and Tavnazia.
+ALL_MAPS = 1; -- Set to 1 to give starting characters all the maps.
+UNLOCK_OUTPOST_WARPS = 1; -- Set to 1 to give starting characters all outpost warps.  2 to add Tu'Lia and Tavnazia.
 
 SHOP_PRICE      = 1.000; -- Multiplies prices in NPC shops.
 GIL_RATE        = 1.000; -- Multiplies gil earned from quests.  Won't always display in game.
 BAYLD_RATE      = 1.000; -- Multiples bayld earned from quests.
-EXP_RATE        = 1.000; -- Multiplies exp earned from fov and quests.
+EXP_RATE        = 5.000; -- Multiplies exp earned from fov and quests.
 TABS_RATE       = 1.000; -- Multiplies tabs earned from fov.
 CURE_POWER      = 1.000; -- Multiplies amount healed from Healing Magic, including the relevant Blue Magic.
 ELEMENTAL_POWER = 1.000; -- Multiplies damage dealt by Elemental and non-drain Dark Magic.
@@ -89,18 +89,18 @@ CHEST_MIN_ILLUSION_TIME  = 1800;  -- 30 minutes
 
 -- Sets spawn type for: Behemoth, Fafnir, Adamantoise, King Behemoth, Nidhog, Aspidochelone.
 -- Use 0 for timed spawns, 1 for force pop only, 2 for both
-LandKingSystem_NQ = 0;
-LandKingSystem_HQ = 0;
+LandKingSystem_NQ = 2;
+LandKingSystem_HQ = 2;
 
 -- DYNAMIS SETTINGS
-    BETWEEN_2DYNA_WAIT_TIME = 1;        -- wait time between 2 Dynamis (in real day) min: 1 day
+    BETWEEN_2DYNA_WAIT_TIME = 2;        -- wait time between 2 Dynamis (in real day) min: 1 day
         DYNA_MIDNIGHT_RESET = true;     -- if true, makes the wait time count by number of server midnights instead of full 24 hour intervals
              DYNA_LEVEL_MIN = 65;       -- level min for entering in Dynamis
     TIMELESS_HOURGLASS_COST = 500000;   -- cost of the timeless hourglass for Dynamis.
      CURRENCY_EXCHANGE_RATE = 100;      -- X Tier 1 ancient currency -> 1 Tier 2, and so on.  Certain values may conflict with shop items.  Not designed to exceed 198.
 RELIC_2ND_UPGRADE_WAIT_TIME = 604800;      -- wait time for 2nd relic upgrade (stage 2 -> stage 3) in seconds. 604800s = 1 RL week.
 RELIC_3RD_UPGRADE_WAIT_TIME = 295200;      -- wait time for 3rd relic upgrade (stage 3 -> stage 4) in seconds. 295200s = 82 hours.
-FREE_COP_DYNAMIS = 1 ; -- Authorize player to entering inside COP Dynamis without completing COP mission ( 1 = enable 0= disable)
+FREE_COP_DYNAMIS = 0 ; -- Authorize player to entering inside COP Dynamis without completing COP mission ( 1 = enable 0= disable)
 
 -- QUEST/MISSION SPECIFIC SETTINGS
 WSNM_LEVEL = 70; -- Min Level to get WSNM Quests
@@ -134,7 +134,7 @@ ELEMENTAL_DEBUFF_DURATION = 120; -- base duration of elemental debuffs
 AQUAVEIL_COUNTER = 1;  -- Base amount of hits Aquaveil absorbs to prevent spell interrupts. Retail is 1.
 ABSORB_SPELL_AMOUNT = 8; -- how much of a stat gets absorbed by DRK absorb spells - expected to be a multiple of 8.
 ABSORB_SPELL_TICK = 9; -- duration of 1 absorb spell tick
-SNEAK_INVIS_DURATION_MULTIPLIER = 1; -- multiplies duration of sneak,invis,deodorize to reduce player torture. 1 = retail behavior.
+SNEAK_INVIS_DURATION_MULTIPLIER = 2; -- multiplies duration of sneak,invis,deodorize to reduce player torture. 1 = retail behavior.
 USE_OLD_CURE_FORMULA = false; -- true/false. if true, uses older cure formula (3*MND + VIT + 3*(healing skill/5)) // cure 6 will use the newer formula
 
 -- CELEBRATIONS
